@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Welkom</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/geluksgetal}" sec:authorize="isAuthenticated()">Geluksgetal</a></li>
+    <li><a th:href="@{/login}" sec:authorize="isAnonymous()">Inloggen</a></li>
+</ul>
+</body>
+</html>
